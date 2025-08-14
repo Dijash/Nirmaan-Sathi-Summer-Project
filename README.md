@@ -1,6 +1,12 @@
 # 🏗️ NirmaanSathi – Your Construction Friend  
 **Dream. Design. Deliver.**
 
+![License](https://img.shields.io/badge/license-MIT-green)  
+![Tech Stack](https://img.shields.io/badge/tech-HTML%20%7C%20CSS%20%7C%20Tailwind%20%7C%20JS%20%7C%20Node.js%20%7C%20MySQL-blue)  
+![Status](https://img.shields.io/badge/status-in%20development-orange)
+
+---
+
 ## 📌 Introduction
 In Nepal, home construction and renovation often involve a long and complicated search for trustworthy architects and engineers. Clients usually rely on personal recommendations, which can limit options, raise doubts about service quality, and cause delays.  
 
@@ -74,14 +80,14 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-## 📧 Contact
-For any queries or collaborations:  
+## 📧 Contact & GitHub
+**Emails:**  
+- prishmadahal48@gmail.com  
+- utsavbhattarai29@gmail.com  
+- alkaprasai1@gmail.com  
 
-- **Email:** prishmadahal48@gmail.com  
-- **Email:** utsavbhattarai29@gmail.com  
-- **Email:** alkaprasai1@gmail.com  
-
-- **GitHub:** [Prishma-Dahal](https://github.com/Prishma-Dahal)  
-- **GitHub:** [Dijash](https://github.com/Dijash)  
+**GitHub Profiles:**  
+- [Prishma-Dahal](https://github.com/Prishma-Dahal)  
+- [Dijash](https://github.com/Dijash)  
 
 ---

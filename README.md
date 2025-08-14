@@ -92,5 +92,6 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 - prishmadahal48@gmail.com  
 - utsavbhattarai29@gmail.com  
 - alkaprasai1@gmail.com  
+- sahyubraj023@gmail.com 
 
 ---

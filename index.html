@@ -8,19 +8,19 @@
   <title>NirmaanSathi - Connect with Nepal's Top Construction Professionals</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 100%);
     }
 
     .glass-effect {
       backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(31, 41, 55, 0.8);
     }
 
     .card-hover {
@@ -94,7 +94,7 @@
       height: 2px;
       bottom: -5px;
       left: 50%;
-      background-color: #2563eb;
+      background-color: #60a5fa;
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
@@ -126,27 +126,21 @@
     }
 
     .service-card {
-      background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+      background: linear-gradient(145deg, #1f2937 0%, #111827 100%);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #374151;
     }
 
     .service-card:hover {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .parallax {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background: linear-gradient(145deg, #111827 0%, #1f2937 100%);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
 
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-gray-900 text-gray-100 font-sans">
   <!-- Professional Navbar -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-white py-6">
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800 py-6">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
       <a href="/homepage" class="group">
         <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
@@ -155,7 +149,7 @@
             <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
           </div>
           <!-- Text -->
-          <span class="text-2xl font-bold text-gray-900">
+          <span class="text-2xl font-bold text-gray-100">
             NirmaanSathi
           </span>
         </div>
@@ -164,25 +158,25 @@
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="/search" class="nav-link text-gray-700 hover:text-blue-600 font-medium">
+        <a href="/search" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
           Find Professionals
         </a>
-        <a href="/projects" class="nav-link text-gray-700 hover:text-blue-600 font-medium">
+        <a href="/projects" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
           Project Map
         </a>
-        <a href="/quote-request" class="nav-link text-gray-700 hover:text-blue-600 font-medium">
+        <a href="/quote-request" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
           Get Quote
         </a>
-        <a href="#how-it-works" class="nav-link text-gray-700 hover:text-blue-600 font-medium">
+        <a href="#how-it-works" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
           How It Works
         </a>
-        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">
+        <a href="#contact" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
           Contact
         </a>
       </div>
 
       <div class="hidden md:flex items-center space-x-4">
-        <button class="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
+        <button class="text-gray-200 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
           Sign In
         </button>
         <a href="/quote-request"
@@ -204,25 +198,25 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-      class="md:hidden bg-white border-t transform -translate-y-full opacity-0 transition-all duration-300">
+      class="md:hidden bg-gray-800 border-t transform -translate-y-full opacity-0 transition-all duration-300">
       <div class="px-6 py-4 space-y-4">
-        <a href="/search" class="block text-gray-700 font-medium hover:text-blue-600 transition-colors">
+        <a href="/search" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
           Find Professionals
         </a>
-        <a href="/projects" class="block text-gray-700 font-medium hover:text-blue-600 transition-colors">
+        <a href="/projects" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
           Project Map
         </a>
-        <a href="/quote-request" class="block text-gray-700 font-medium hover:text-blue-600 transition-colors">
+        <a href="/quote-request" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
           Get Quote
         </a>
-        <a href="#how-it-works" class="block text-gray-700 font-medium hover:text-blue-600 transition-colors">
+        <a href="#how-it-works" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
           How It Works
         </a>
-        <a href="#contact" class="block text-gray-700 font-medium hover:text-blue-600 transition-colors">
+        <a href="#contact" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
           Contact
         </a>
         <div class="pt-4 space-y-2">
-          <button class="block w-full text-left text-gray-700 font-medium hover:text-blue-600 transition-colors">
+          <button class="block w-full text-left text-gray-200 font-medium hover:text-blue-600 transition-colors">
             Sign In
           </button>
           <a href="/quote-request"
@@ -235,20 +229,23 @@
   </nav>
 
   <!-- Clean Hero Section -->
-  <section class="pt-24 pb-16 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+  <section class="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden mt-3">
     <!-- Background decorative elements -->
     <div class="absolute top-0 left-0 w-full h-full">
-      <div class="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 floating"></div>
-      <div class="absolute top-40 right-20 w-32 h-32 bg-purple-200 rounded-full opacity-15 floating"
+      <div class="absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full opacity-20 floating"></div>
+      <div class="absolute top-40 right-20 w-32 h-32 bg-purple-500 rounded-full opacity-15 floating"
         style="animation-delay: -2s;"></div>
-      <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-green-200 rounded-full opacity-25 floating"
+      <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-green-500 rounded-full opacity-25 floating"
         style="animation-delay: -4s;"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#1e3a8a,_transparent_50%)] opacity-20"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#4c1d95,_transparent_50%)] opacity-20">
+      </div>
     </div>
-
+  
     <div class="max-w-6xl mx-auto px-6 relative">
       <div class="text-center max-w-4xl mx-auto">
         <div
-          class="fade-in inline-flex items-center bg-blue-50 text-blue-700 rounded-full px-4 py-2 mb-8 text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-all duration-300 cursor-pointer">
+          class="fade-in inline-flex items-center bg-gray-800 text-blue-400 rounded-full px-4 py-2 mb-8 text-sm font-medium border border-gray-700 hover:bg-gray-700 transition-all duration-300 cursor-pointer">
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd"
               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -256,28 +253,27 @@
           </svg>
           Trusted by 1,000+ professionals across Nepal
         </div>
-
-      <h1 class="fade-in stagger-1 text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-2">
-        Connect with Nepal's Top
-      </h1>
-      <h1
-        class="fade-in stagger-1 text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 leading-tight mt-1">
-        Construction Professionals
-      </h1>
-
-        <p class="fade-in stagger-2 text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto mt-2">
-          Find verified architects, engineers, and contractors for your
-          construction project. From planning to completion, we make
-          building in Nepal simple and reliable.
+  
+        <h1 class="fade-in stagger-1 text-4xl md:text-6xl font-bold text-gray-100 leading-tight mb-2">
+          Connect with Nepal's Top
+        </h1>
+        <h1
+          class="fade-in stagger-1 text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 leading-tight mt-1">
+          Construction Professionals
+        </h1>
+  
+        <p class="fade-in stagger-2 text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto mt-2">
+          Find verified architects, engineers, and contractors for your construction project. From planning to completion,
+          we make building in Nepal simple and reliable.
         </p>
-
+  
         <div class="fade-in stagger-3 flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a href="/search"
             class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:scale-105 transition-all duration-300 text-center shadow-lg hover:shadow-xl">
             Find Professionals
           </a>
           <button
-            class="flex items-center justify-center text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold group hover:scale-105">
+            class="flex items-center justify-center text-blue-400 hover:text-blue-300 transition-all duration-300 font-semibold group hover:scale-105">
             <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor"
               viewBox="0 0 20 20">
               <path fill-rule="evenodd"
@@ -287,48 +283,43 @@
             Watch Demo
           </button>
         </div>
-
+  
         <!-- Stats -->
-        <div class="fade-in stagger-4 grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-200">
+        <div class="fade-in stagger-4 grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-700">
           <div class="stats-counter text-center group hover:scale-105 transition-transform duration-300">
-            <div class="text-3xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors duration-300">
-              1,000+
-            </div>
-            <div class="text-gray-600 text-sm">Verified Professionals</div>
+            <div class="text-3xl font-bold text-gray-100 mb-1 group-hover:text-blue-400 transition-colors duration-300">
+              1,000+</div>
+            <div class="text-gray-400 text-sm">Verified Professionals</div>
           </div>
           <div class="stats-counter text-center group hover:scale-105 transition-transform duration-300">
-            <div
-              class="text-3xl font-bold text-gray-900 mb-1 group-hover:text-green-600 transition-colors duration-300">
-              500+
-            </div>
-            <div class="text-gray-600 text-sm">Projects Completed</div>
+            <div class="text-3xl font-bold text-gray-100 mb-1 group-hover:text-green-400 transition-colors duration-300">
+              500+</div>
+            <div class="text-gray-400 text-sm">Projects Completed</div>
           </div>
           <div class="stats-counter text-center group hover:scale-105 transition-transform duration-300">
-            <div
-              class="text-3xl font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors duration-300">
-              98%
-            </div>
-            <div class="text-gray-600 text-sm">Client Satisfaction</div>
+            <div class="text-3xl font-bold text-gray-100 mb-1 group-hover:text-purple-400 transition-colors duration-300">
+              98%</div>
+            <div class="text-gray-400 text-sm">Client Satisfaction</div>
           </div>
           <div class="stats-counter text-center group hover:scale-105 transition-transform duration-300">
-            <div class="text-3xl font-bold text-gray-900 mb-1 group-hover:text-red-600 transition-colors duration-300">
-              50+
+            <div class="text-3xl font-bold text-gray-100 mb-1 group-hover:text-red-400 transition-colors duration-300">50+
             </div>
-            <div class="text-gray-600 text-sm">Cities Covered</div>
+            <div class="text-gray-400 text-sm">Cities Covered</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- Services Section -->
-  <section id="services" class="py-20 bg-white relative">
+  <section id="services" class="py-20 bg-gray-800 relative">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-100 mb-4">
           Complete Construction Solutions
         </h2>
-        <p class="fade-in stagger-1 text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="fade-in stagger-1 text-xl text-gray-400 max-w-2xl mx-auto">
           Everything you need to manage your construction project from start
           to finish.
         </p>
@@ -336,67 +327,67 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="fade-in stagger-1 service-card card-hover p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+          <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-md">
             <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-gray-100 mb-3">
             Find Professionals
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Search and connect with verified architects, engineers, and contractors in your area.
           </p>
         </div>
 
         <div class="fade-in stagger-2 service-card card-hover p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+          <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-md">
             <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-gray-100 mb-3">
             Verified Network
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             All professionals are background-checked, licensed, and insured for your protection.
           </p>
         </div>
 
         <div class="fade-in stagger-3 service-card card-hover p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+          <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-md">
             <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-gray-100 mb-3">
             Project Management
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Track progress, manage budgets, and communicate with your team in one platform.
           </p>
         </div>
 
         <div class="fade-in stagger-4 service-card card-hover p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+          <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-md">
             <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
               <path
                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-gray-100 mb-3">
             Reviews & Ratings
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Read authentic reviews and see portfolios before choosing your professionals.
           </p>
         </div>
 
         <div class="fade-in stagger-5 service-card card-hover p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+          <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-md">
             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -404,25 +395,25 @@
                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-gray-100 mb-3">
             Local Expertise
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Find professionals who understand local building codes and regulations.
           </p>
         </div>
 
         <div class="fade-in stagger-6 service-card card-hover p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+          <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-md">
             <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-gray-100 mb-3">
             Quality Assurance
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Regular quality checks and milestone reviews ensure project standards.
           </p>
         </div>
@@ -431,55 +422,57 @@
   </section>
 
   <!-- How It Works -->
-  <section id="how-it-works" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative">
-    <div class="max-w-6xl mx-auto px-6">
+  <section id="how-it-works" class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#1e3a8a,_transparent_50%)] opacity-10"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#4c1d95,_transparent_50%)] opacity-10"></div>
+    <div class="max-w-6xl mx-auto px-6 relative">
       <div class="text-center mb-16">
-        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-100 mb-4">
           How It Works
         </h2>
-        <p class="fade-in stagger-1 text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="fade-in stagger-1 text-xl text-gray-400 max-w-2xl mx-auto">
           Get started with your construction project in three simple steps.
         </p>
       </div>
-
+  
       <div class="grid md:grid-cols-3 gap-8">
         <div class="fade-in stagger-1 text-center group">
           <div
             class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl pulse-slow">
             01
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+          <h3 class="text-xl font-semibold text-gray-100 mb-4">
             Post Your Project
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Tell us about your construction project, budget, timeline, and location requirements.
           </p>
         </div>
-
+  
         <div class="fade-in stagger-2 text-center group">
           <div
             class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl pulse-slow"
             style="animation-delay: 1s;">
             02
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+          <h3 class="text-xl font-semibold text-gray-100 mb-4">
             Get Matched
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             We connect you with qualified professionals who match your project needs and budget.
           </p>
         </div>
-
+  
         <div class="fade-in stagger-3 text-center group">
           <div
             class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl pulse-slow"
             style="animation-delay: 2s;">
             03
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+          <h3 class="text-xl font-semibold text-gray-100 mb-4">
             Start Building
           </h3>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Review profiles, compare quotes, and start your project with confidence.
           </p>
         </div>
@@ -487,14 +480,15 @@
     </div>
   </section>
 
+
   <!-- Professional Types -->
-  <section id="professionals" class="py-20 bg-white">
+  <section id="professionals" class="py-20 bg-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-100 mb-4">
           Find the Right Professional
         </h2>
-        <p class="fade-in stagger-1 text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="fade-in stagger-1 text-xl text-gray-400 max-w-2xl mx-auto">
           Connect with experienced professionals specialized in different
           aspects of construction.
         </p>
@@ -502,7 +496,7 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
-          class="fade-in stagger-1 bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
+          class="fade-in stagger-1 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
           <div class="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
             <div
               class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -513,13 +507,13 @@
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-semibold text-gray-900 mb-1">Architects</h3>
-            <p class="text-gray-600 text-sm">250+ professionals</p>
+            <h3 class="font-semibold text-gray-100 mb-1">Architects</h3>
+            <p class="text-gray-400 text-sm">250+ professionals</p>
           </div>
         </div>
 
         <div
-          class="fade-in stagger-2 bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
+          class="fade-in stagger-2 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
           <div class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
             <div
               class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -530,13 +524,13 @@
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-semibold text-gray-900 mb-1">Civil Engineers</h3>
-            <p class="text-gray-600 text-sm">180+ professionals</p>
+            <h3 class="font-semibold text-gray-100 mb-1">Civil Engineers</h3>
+            <p class="text-gray-400 text-sm">180+ professionals</p>
           </div>
         </div>
 
         <div
-          class="fade-in stagger-3 bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
+          class="fade-in stagger-3 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
           <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
             <div
               class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -547,13 +541,13 @@
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-semibold text-gray-900 mb-1">Contractors</h3>
-            <p class="text-gray-600 text-sm">320+ professionals</p>
+            <h3 class="font-semibold text-gray-100 mb-1">Contractors</h3>
+            <p class="text-gray-400 text-sm">320+ professionals</p>
           </div>
         </div>
 
         <div
-          class="fade-in stagger-4 bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
+          class="fade-in stagger-4 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group card-hover">
           <div class="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
             <div
               class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -564,8 +558,8 @@
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-semibold text-gray-900 mb-1">Interior Designers</h3>
-            <p class="text-gray-600 text-sm">150+ professionals</p>
+            <h3 class="font-semibold text-gray-100 mb-1">Interior Designers</h3>
+            <p class="text-gray-400 text-sm">150+ professionals</p>
           </div>
         </div>
       </div>
@@ -573,45 +567,31 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-    <div class="max-w-6xl mx-auto px-6">
+  <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#1e3a8a,_transparent_50%)] opacity-10"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#4c1d95,_transparent_50%)] opacity-10"></div>
+    <div class="max-w-6xl mx-auto px-6 relative">
       <div class="text-center mb-16">
-        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="fade-in text-3xl md:text-4xl font-bold text-gray-100 mb-4">
           What Our Clients Say
         </h2>
-        <p class="fade-in stagger-1 text-xl text-gray-600">
+        <p class="fade-in stagger-1 text-xl text-gray-400">
           Real feedback from satisfied clients across Nepal.
         </p>
       </div>
-
+  
       <div class="grid md:grid-cols-2 gap-8">
         <div
-          class="fade-in stagger-1 bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover">
-          <div class="flex items-center mb-4">
-            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
+          class="fade-in stagger-1 bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover">
+          <div class="flex items-center mb-4 text-yellow-400">
+            <template x-for="i in 5"><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg></template>
           </div>
-          <p class="text-gray-700 mb-6 leading-relaxed italic">
-            "NirmaanSathi helped us find an excellent architect for our dream home. The process was smooth and
-            transparent from start to finish."
+          <p class="text-gray-200 mb-6 leading-relaxed italic">
+            "NirmaanSathi helped us find an excellent architect for our dream home. The process was smooth and transparent
+            from start to finish."
           </p>
           <div class="flex items-center">
             <div
@@ -619,39 +599,23 @@
               <span class="text-white font-semibold text-sm">JA</span>
             </div>
             <div>
-              <div class="font-semibold text-gray-900">John Andreson</div>
-              <div class="text-gray-600 text-sm">Homeowner, Kathmandu</div>
+              <div class="font-semibold text-gray-100">John Andreson</div>
+              <div class="text-gray-400 text-sm">Homeowner, Kathmandu</div>
             </div>
           </div>
         </div>
-
+  
         <div
-          class="fade-in stagger-2 bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover">
-          <div class="flex items-center mb-4">
-            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400 fill-current ml-1" viewBox="0 0 20 20">
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
+          class="fade-in stagger-2 bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover">
+          <div class="flex items-center mb-4 text-yellow-400">
+            <template x-for="i in 5"><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg></template>
           </div>
-          <p class="text-gray-700 mb-6 leading-relaxed italic">
-            "Finding reliable contractors for our office building was challenging until we discovered NirmaanSathi.
-            Highly recommended!"
+          <p class="text-gray-200 mb-6 leading-relaxed italic">
+            "Finding reliable contractors for our office building was challenging until we discovered NirmaanSathi. Highly
+            recommended!"
           </p>
           <div class="flex items-center">
             <div
@@ -659,8 +623,8 @@
               <span class="text-white font-semibold text-sm">TJ</span>
             </div>
             <div>
-              <div class="font-semibold text-gray-900">Tina Johnson</div>
-              <div class="text-gray-600 text-sm">Business Owner, Pokhara</div>
+              <div class="font-semibold text-gray-100">Tina Johnson</div>
+              <div class="text-gray-400 text-sm">Business Owner, Pokhara</div>
             </div>
           </div>
         </div>
@@ -673,10 +637,10 @@
     <!-- Background decorations -->
     <div class="absolute inset-0">
       <div class="absolute top-0 left-0 w-full h-full opacity-10">
-        <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full floating"></div>
-        <div class="absolute bottom-10 right-10 w-24 h-24 bg-white rounded-full floating" style="animation-delay: -3s;">
+        <div class="absolute top-10 left-10 w-32 h-32 bg-gray-800 rounded-full floating"></div>
+        <div class="absolute bottom-10 right-10 w-24 h-24 bg-gray-800 rounded-full floating" style="animation-delay: -3s;">
         </div>
-        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full floating" style="animation-delay: -1s;">
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-gray-800 rounded-full floating" style="animation-delay: -1s;">
         </div>
       </div>
     </div>
@@ -691,11 +655,11 @@
       </p>
       <div class="fade-in stagger-2 flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/quote-request"
-          class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 text-center hover:scale-105 shadow-lg hover:shadow-xl">
+          class="bg-gray-800 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 text-center hover:scale-105 shadow-lg hover:shadow-xl">
           Get Quote Today
         </a>
         <a href="#contact"
-          class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 text-center hover:scale-105">
+          class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 hover:text-blue-600 transition-all duration-300 text-center hover:scale-105">
           Contact Us
         </a>
       </div>

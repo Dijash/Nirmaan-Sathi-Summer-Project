@@ -1,7 +1,6 @@
 # 🏗️ NirmaanSathi – Your Construction Friend  
 **Dream. Design. Deliver.**
 
-![License](https://img.shields.io/badge/license-MIT-green)  
 ![Tech Stack](https://img.shields.io/badge/tech-HTML%20%7C%20CSS%20%7C%20Tailwind%20%7C%20JS%20%7C%20Node.js%20%7C%20MySQL-blue)  
 ![Status](https://img.shields.io/badge/status-in%20development-orange)
 

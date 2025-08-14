@@ -76,7 +76,10 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📧 Contact
 For any queries or collaborations:  
-**Email:** your-email@example.com  
-**GitHub:** [your-github-profile](https://github.com/your-github-profile)
+**Email:** prishmadahal48@gmail.com 
+**Email:** utsavbhattarai29@gmail.com 
+**Email:** alkaprasai1@gmail.com
+**GitHub:** [Prishma-daha;](https://github.com/Prishma-Dahal)
+**GitHub:** [Dijash](https://github.com/Dijash)
 
 ---

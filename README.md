@@ -82,10 +82,8 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 👥 Contributors
 
-| [<img src="https://avatars.githubusercontent.com/Prishma-Dahal" width="100" height="100" style="border-radius:50%"><br>**Prishma Dahal**](https://github.com/Prishma-Dahal) | [<img src="https://avatars.githubusercontent.com/Dijash" width="100" height="100" style="border-radius:50%"><br>**Dijash**](https://github.com/Dijash) | [<img src="https://avatars.githubusercontent.com/u/alkaprasai" width="100" height="100" style="border-radius:50%"><br>**Alka Prasai**](https://github.com/alkaprasai) |
+| [<img src="https://avatars.githubusercontent.com/Prishma-Dahal" width="100" height="100" style="border-radius:50%"><br>**Prishma Dahal**](https://github.com/Prishma-Dahal) | [<img src="https://avatars.githubusercontent.com/Dijash" width="100" height="100" style="border-radius:50%"><br>**Dijash**](https://github.com/Dijash) | [<img src="https://avatars.githubusercontent.com/Dijash" width="100" height="100" style="border-radius:50%"><br>**Alka Prasai**](https://github.com/alkaprasai) |
 | --- | --- | --- |
-
-> **Note:** Replace `000000000` in Alka Prasai’s avatar URL with her actual GitHub user ID and update the GitHub profile link.
 
 ---
 

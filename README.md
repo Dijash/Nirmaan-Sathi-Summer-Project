@@ -83,7 +83,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ## 👥 Contributors
 
 | [<img src="https://avatars.githubusercontent.com/Prishma-Dahal" width="100" height="100" style="border-radius:50%"><br>**Prishma Dahal**](https://github.com/Prishma-Dahal) | [<img src="https://avatars.githubusercontent.com/Dijash" width="100" height="100" style="border-radius:50%"><br>**Dijash**](https://github.com/Dijash) | [<img src="https://avatars.githubusercontent.com/alkaprasai" width="100" height="100" style="border-radius:50%"><br>**Alka Prasai**](https://github.com/alkaprasai) |  [<img src="https://avatars.githubusercontent.com/Yubraj-sah" width="100" height="100" style="border-radius:50%"><br>**Yubraj-sah**](https://github.com/Yubraj-sah)
-| --- | --- | --- |
+| --- | --- | --- | --- |
 
 ---
 

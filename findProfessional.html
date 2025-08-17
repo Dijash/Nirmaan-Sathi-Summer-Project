@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NirmaanSathi | Find Trusted Professionals</title>
+  <meta name="description"
+    content="Connect with verified architects, engineers, and project teams. Build your dream with confidence through our curated network of professionals." />
+  <meta name="author" content="NirmaanSathi" />
+
+  <meta property="og:title" content="NirmaanSathi | Find Trusted Professionals" />
+  <meta property="og:description"
+    content="Connect with verified architects, engineers, and project teams. Build your dream with confidence through our curated network of professionals." />
+  <meta property="og:type" content="website" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: 'hsl(222 47% 8%)',
+            foreground: 'hsl(210 40% 98%)',
+            card: 'hsl(222 47% 11%)',
+            'card-foreground': 'hsl(210 40% 98%)',
+            primary: 'hsl(217 91% 60%)',
+            'primary-foreground': 'hsl(222 47% 11%)',
+            'primary-glow': 'hsl(217 91% 70%)',
+            secondary: 'hsl(217 32% 17%)',
+            'secondary-foreground': 'hsl(210 40% 98%)',
+            muted: 'hsl(217 32% 17%)',
+            'muted-foreground': 'hsl(215 20% 65%)',
+            accent: 'hsl(217 32% 17%)',
+            'accent-foreground': 'hsl(210 40% 98%)',
+            border: 'hsl(217 32% 17%)',
+            input: 'hsl(217 32% 17%)',
+            ring: 'hsl(217 91% 60%)',
+            verified: 'hsl(142 71% 45%)',
+            available: 'hsl(142 71% 45%)',
+            busy: 'hsl(25 95% 53%)',
+            featured: 'hsl(45 93% 47%)',
+            premium: 'hsl(271 91% 65%)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, hsl(222 47% 8%), hsl(217 32% 17%));
+    }
+
+    .professional-card {
+      background: linear-gradient(135deg, hsl(222 47% 11%), hsl(217 32% 17%));
+      box-shadow: 0 4px 6px -1px hsl(222 47% 8% / 0.3), 0 2px 4px -1px hsl(222 47% 8% / 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .professional-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+    }
+
+    .skill-tag {
+      background: hsl(217 32% 17%);
+      border-color: hsl(217 32% 17%);
+      color: hsl(215 20% 65%);
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      background: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
+      color: white;
+      transform: scale(1.05);
+      border-color: transparent;
+    }
+
+    .badge-verified {
+      background: hsl(142 71% 45%);
+    }
+
+    .badge-featured {
+      background: hsl(45 93% 47%);
+    }
+
+    .badge-busy {
+      background: hsl(25 95% 53% / 0.9);
+    }
+
+    .badge-available {
+      background: hsl(142 71% 45% / 0.9);
+    }
+
+    .rating-stars {
+      background: linear-gradient(45deg, hsl(45 93% 47%), hsl(45 93% 57%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      background-color: hsl(217 91% 60%);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-hero {
+      background: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .btn-hero:hover::before {
+      left: 100%;
+    }
+
+    .search-glow:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px hsl(217 91% 60% / 0.2), 0 0 40px hsl(217 91% 70% / 0.4);
+    }
+
+    .filter-button {
+      transition: all 0.2s ease;
+      border: 1px solid hsl(217 32% 17%);
+      color: hsl(215 20% 65%);
+    }
+
+    .filter-button:hover {
+      border-color: hsl(217 91% 60%);
+      background: hsl(217 91% 60% / 0.1);
+      color: hsl(217 91% 60%);
+    }
+
+    .filter-button.active {
+      background: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
+      color: white;
+      border-color: transparent;
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg, hsl(222 47% 11% / 0.8), hsl(217 32% 17% / 0.6));
+      backdrop-filter: blur(20px);
+      border: 1px solid hsl(217 32% 17% / 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-foreground min-h-screen">
+<!-- Professional Navbar -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800 py-6">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+    <a href="/index.html" class="group">
+      <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+        <!-- Logo -->
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden">
+          <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+        </div>
+        <!-- Text -->
+        <span class="text-2xl font-bold text-gray-100">
+          NirmaanSathi
+        </span>
+      </div>
+    </a>
+
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="/findProfessional.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+        Find Professionals
+      </a>
+      <a href="/projects.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+        Project Map
+      </a>
+      <a href="/quote-request" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+        Get Quote
+      </a>
+      <a href="#how-it-works" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+        How It Works
+      </a>
+      <a href="#contact" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+        Contact
+      </a>
+    </div>
+
+    <div class="hidden md:flex items-center space-x-4">
+      <button class="text-gray-200 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
+        Sign In
+      </button>
+      <a href="/quote-request"
+        class="btn-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-all duration-300">
+        Get Quote
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden transition-transform duration-300 hover:scale-110">
+      <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="md:hidden bg-gray-800 border-t transform -translate-y-full opacity-0 transition-all duration-300">
+    <div class="px-6 py-4 space-y-4">
+      <a href="/findProfessional.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        Find Professionals
+      </a>
+      <a href="/projects" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        Project Map
+      </a>
+      <a href="/quote-request" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        Get Quote
+      </a>
+      <a href="#how-it-works" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        How It Works
+      </a>
+      <a href="#contact" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        Contact
+      </a>
+      <div class="pt-4 space-y-2">
+        <button class="block w-full text-left text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Sign In
+        </button>
+        <a href="/quote-request"
+          class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Main Content -->
+  <main class="pt-28 pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1
+          class="text-5xl font-bold bg-gradient-to-r from-foreground via-foreground to-foreground bg-clip-text text-transparent mb-6 leading-tight">
+          Find Trusted <span class="text-primary">Professionals</span>
+        </h1>
+        <p class="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          Connect with verified architects, engineers, and project teams. Build your dream with confidence through our
+          curated network of professionals.
+        </p>
+        <div class="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
+          <div class="flex items-center">
+            <i class="fas fa-check-circle text-verified mr-2"></i>
+            <span>500+ Verified Professionals</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-star text-featured mr-2"></i>
+            <span>4.8 Average Rating</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-project-diagram text-primary mr-2"></i>
+            <span>2000+ Projects Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="glass-card p-8 rounded-2xl mb-12">
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-foreground mb-4">Find Your Perfect Match</h3>
+
+          <!-- Main Search -->
+          <div class="relative mb-6">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <i class="fas fa-search text-muted-foreground"></i>
+            </div>
+            <input type="text" placeholder="Search by name, skill, or expertise..."
+              class="w-full pl-12 pr-4 py-4 text-lg bg-input border border-border rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary search-glow transition-all duration-300 text-foreground"
+              id="main-search" />
+          </div>
+
+          <!-- Filter Grid -->
+          <div class="grid md:grid-cols-4 gap-4 mb-6">
+            <div class="relative">
+              <select
+                class="w-full px-4 py-3 bg-input border border-border text-foreground rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all appearance-none">
+                <option>📍 All Locations</option>
+                <option>🏙️ Kathmandu</option>
+                <option>🏔️ Pokhara</option>
+                <option>🌆 Lalitpur</option>
+                <option>🏘️ Bhaktapur</option>
+              </select>
+              <i
+                class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground pointer-events-none"></i>
+            </div>
+
+            <div class="relative">
+              <select
+                class="w-full px-4 py-3 bg-input border border-border text-foreground rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all appearance-none">
+                <option>🏗️ All Expertise</option>
+                <option>🏛️ Architect</option>
+                <option>⚙️ Civil Engineer</option>
+                <option>🎨 Interior Designer</option>
+                <option>🏠 General Contractor</option>
+              </select>
+              <i
+                class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground pointer-events-none"></i>
+            </div>
+
+            <div class="relative">
+              <select
+                class="w-full px-4 py-3 bg-input border border-border text-foreground rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all appearance-none">
+                <option>💰 Budget Range</option>
+                <option>💵 Under Rs. 50K</option>
+                <option>💴 Rs. 50K - 200K</option>
+                <option>💶 Rs. 200K - 500K</option>
+                <option>💷 Above Rs. 500K</option>
+              </select>
+              <i
+                class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground pointer-events-none"></i>
+            </div>
+
+            <button type="button" id="search-btn"
+              class="btn-hero text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
+              <i class="fas fa-search mr-2"></i>Search
+            </button>
+          </div>
+
+          <!-- Quick Filters -->
+          <div class="flex flex-wrap gap-2">
+            <span class="text-sm font-medium text-muted-foreground mr-2">Quick filters:</span>
+            <button class="filter-button px-3 py-1 text-sm rounded-full" data-filter="top-rated">
+              <i class="fas fa-star text-featured mr-1"></i>Top Rated
+            </button>
+            <button class="filter-button px-3 py-1 text-sm rounded-full" data-filter="available">
+              <i class="fas fa-clock text-available mr-1"></i>Available Now
+            </button>
+            <button class="filter-button px-3 py-1 text-sm rounded-full" data-filter="verified">
+              <i class="fas fa-award text-verified mr-1"></i>Verified
+            </button>
+            <button class="filter-button px-3 py-1 text-sm rounded-full" data-filter="fast-response">
+              <i class="fas fa-bolt text-featured mr-1"></i>Fast Response
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Header -->
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl font-bold text-foreground">Featured Professionals</h2>
+          <p class="text-muted-foreground">Showing <span id="results-count">6</span> of 247 results</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <span class="text-sm text-muted-foreground">Sort by:</span>
+          <select id="sort-select"
+            class="px-3 py-2 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-primary text-sm">
+            <option value="relevance">Relevance</option>
+            <option value="rating">Rating</option>
+            <option value="experience">Experience</option>
+            <option value="price">Price</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Professionals Grid -->
+      <div id="professionals-grid" class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-12">
+        <!-- Professional Card 1 -->
+        <div class="professional-card rounded-xl overflow-hidden" data-rating="4.9" data-experience="8"
+          data-price="1200">
+          <div class="relative">
+            <img src="https://i.pinimg.com/736x/e8/e6/41/e8e64141f4c0ae39c32f9701ccea9a2e.jpg"
+              alt="Ar. Suman Shrestha" class="w-full h-48 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="badge-verified text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-check mr-1"></i>Verified
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4">
+              <div class="flex items-center badge-available text-white text-xs px-2 py-1 rounded-full">
+                <i class="fas fa-eye mr-1"></i>
+                <span>Available</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-card-foreground">Ar. Suman Shrestha</h3>
+                <p class="text-muted-foreground text-sm">Senior Architect</p>
+              </div>
+              <div class="text-right">
+                <div class="rating-stars text-lg">★★★★★</div>
+                <p class="text-xs text-muted-foreground">4.9 (127 reviews)</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center text-muted-foreground text-sm mb-2">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>8+ years experience</span>
+              </div>
+              <div class="flex items-center text-muted-foreground text-sm mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Kathmandu, Nepal</span>
+              </div>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Residential Design</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">3D Modeling</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">AutoCAD</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold text-primary">Rs. 1,200/hr</div>
+              <div class="flex space-x-2">
+                <button class="heart-btn text-muted-foreground hover:text-red-500 transition-colors p-2">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn-hero text-white px-4 py-2 rounded-lg font-medium transition-all">
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Card 2 -->
+        <div class="professional-card rounded-xl overflow-hidden" data-rating="4.6" data-experience="10"
+          data-price="1500">
+          <div class="relative">
+            <img src="https://i.pinimg.com/1200x/85/fc/09/85fc097b34bff079cfe2c2ca2c680870.jpg"
+              alt="Eng. Ramesh Karki" class="w-full h-48 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="badge-verified text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-check mr-1"></i>Verified
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4">
+              <div class="flex items-center badge-busy text-white text-xs px-2 py-1 rounded-full">
+                <i class="fas fa-clock mr-1"></i>
+                <span>Busy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-card-foreground">Eng. Ramesh Karki</h3>
+                <p class="text-muted-foreground text-sm">Structural Engineer</p>
+              </div>
+              <div class="text-right">
+                <div class="rating-stars text-lg">★★★★☆</div>
+                <p class="text-xs text-muted-foreground">4.6 (89 reviews)</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center text-muted-foreground text-sm mb-2">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>10+ years experience</span>
+              </div>
+              <div class="flex items-center text-muted-foreground text-sm mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Lalitpur, Nepal</span>
+              </div>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Structural Analysis</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Seismic Design</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">ETABS</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold text-primary">Rs. 1,500/hr</div>
+              <div class="flex space-x-2">
+                <button class="heart-btn text-muted-foreground hover:text-red-500 transition-colors p-2">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn-hero text-white px-4 py-2 rounded-lg font-medium transition-all">
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Card -->
+        <div class="professional-card rounded-xl overflow-hidden" data-rating="4.8" data-experience="150"
+          data-price="0">
+          <div class="relative">
+            <img src="https://i.pinimg.com/1200x/9f/41/38/9f41381b03337a4393f488de76da0cd2.jpg"
+              alt="Team BuildPro" class="w-full h-48 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="bg-premium text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-users mr-1"></i>Team
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4">
+              <div class="flex items-center badge-available text-white text-xs px-2 py-1 rounded-full">
+                <i class="fas fa-check mr-1"></i>
+                <span>Available</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-card-foreground">Team BuildPro</h3>
+                <p class="text-muted-foreground text-sm">Architects + Engineers</p>
+              </div>
+              <div class="text-right">
+                <div class="rating-stars text-lg">★★★★★</div>
+                <p class="text-xs text-muted-foreground">4.8 (203 reviews)</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center text-muted-foreground text-sm mb-2">
+                <i class="fas fa-project-diagram mr-2"></i>
+                <span>150+ projects completed</span>
+              </div>
+              <div class="flex items-center text-muted-foreground text-sm mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Multiple Locations</span>
+              </div>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Full Service</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Commercial</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Residential</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold text-primary">Project Based</div>
+              <div class="flex space-x-2">
+                <button class="heart-btn text-muted-foreground hover:text-red-500 transition-colors p-2">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn-hero text-white px-4 py-2 rounded-lg font-medium transition-all">
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Card 4 -->
+        <div class="professional-card rounded-xl overflow-hidden" data-rating="4.9" data-experience="6"
+          data-price="800">
+          <div class="relative">
+            <img src="https://i.pinimg.com/736x/ff/30/ed/ff30edbb164bcee5c419ecac1ec3a357.jpg"
+              alt="Ms. Priya Sharma" class="w-full h-48 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="badge-verified text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-check mr-1"></i>Verified
+              </span>
+            </div>
+            <div class="absolute top-4 left-4">
+              <span class="badge-featured text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-star mr-1"></i>Featured
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4">
+              <div class="flex items-center badge-available text-white text-xs px-2 py-1 rounded-full">
+                <i class="fas fa-zap mr-1"></i>
+                <span>Fast Response</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-card-foreground">Ms. Priya Sharma</h3>
+                <p class="text-muted-foreground text-sm">Interior Designer</p>
+              </div>
+              <div class="text-right">
+                <div class="rating-stars text-lg">★★★★★</div>
+                <p class="text-xs text-muted-foreground">4.9 (156 reviews)</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center text-muted-foreground text-sm mb-2">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>6+ years experience</span>
+              </div>
+              <div class="flex items-center text-muted-foreground text-sm mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Pokhara, Nepal</span>
+              </div>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Modern Design</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Space Planning</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">SketchUp</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold text-primary">Rs. 800/hr</div>
+              <div class="flex space-x-2">
+                <button class="heart-btn text-muted-foreground hover:text-red-500 transition-colors p-2">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn-hero text-white px-4 py-2 rounded-lg font-medium transition-all">
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Card 5 -->
+        <div class="professional-card rounded-xl overflow-hidden" data-rating="4.7" data-experience="12"
+          data-price="1400">
+          <div class="relative">
+            <img src="https://i.pinimg.com/736x/a7/3d/f1/a73df1d7a32dffdf71a8dfc6216c81e6.jpg"
+              alt="Eng. Bikash Thapa" class="w-full h-48 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="badge-verified text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-check mr-1"></i>Verified
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4">
+              <div class="flex items-center bg-primary/90 text-white text-xs px-2 py-1 rounded-full">
+                <i class="fas fa-medal mr-1"></i>
+                <span>Top Rated</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-card-foreground">Eng. Bikash Thapa</h3>
+                <p class="text-muted-foreground text-sm">MEP Engineer</p>
+              </div>
+              <div class="text-right">
+                <div class="rating-stars text-lg">★★★★★</div>
+                <p class="text-xs text-muted-foreground">4.7 (94 reviews)</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center text-muted-foreground text-sm mb-2">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>12+ years experience</span>
+              </div>
+              <div class="flex items-center text-muted-foreground text-sm mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Kathmandu, Nepal</span>
+              </div>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">HVAC Design</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Electrical</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Plumbing</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold text-primary">Rs. 1,400/hr</div>
+              <div class="flex space-x-2">
+                <button class="heart-btn text-muted-foreground hover:text-red-500 transition-colors p-2">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn-hero text-white px-4 py-2 rounded-lg font-medium transition-all">
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Card 6 -->
+        <div class="professional-card rounded-xl overflow-hidden" data-rating="4.5" data-experience="7"
+          data-price="1000">
+          <div class="relative">
+            <img src="https://i.pinimg.com/736x/b3/df/d7/b3dfd7259b62bb40b723cadaafcb2389.jpg"
+              alt="Ar. Kiran Maharjan" class="w-full h-48 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="badge-verified text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-check mr-1"></i>Verified
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4">
+              <div class="flex items-center badge-available text-white text-xs px-2 py-1 rounded-full">
+                <i class="fas fa-check mr-1"></i>
+                <span>Available</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-card-foreground">Ar. Kiran Maharjan</h3>
+                <p class="text-muted-foreground text-sm">Landscape Architect</p>
+              </div>
+              <div class="text-right">
+                <div class="rating-stars text-lg">★★★★☆</div>
+                <p class="text-xs text-muted-foreground">4.5 (67 reviews)</p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center text-muted-foreground text-sm mb-2">
+                <i class="fas fa-briefcase mr-2"></i>
+                <span>7+ years experience</span>
+              </div>
+              <div class="flex items-center text-muted-foreground text-sm mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>Bhaktapur, Nepal</span>
+              </div>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Garden Design</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">Sustainable</span>
+                <span class="skill-tag text-xs px-2 py-1 rounded-full cursor-pointer">CAD</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold text-primary">Rs. 1,000/hr</div>
+              <div class="flex space-x-2">
+                <button class="heart-btn text-muted-foreground hover:text-red-500 transition-colors p-2">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn-hero text-white px-4 py-2 rounded-lg font-medium transition-all">
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More Section -->
+      <div class="text-center mb-12">
+        <button id="load-more-btn"
+          class="bg-background/50 backdrop-blur-sm border border-border text-foreground font-semibold px-8 py-4 rounded-xl hover:bg-background/80 transition-all duration-300">
+          <i class="fas fa-plus mr-2"></i>Load More Professionals
+        </button>
+        <p class="text-muted-foreground text-sm mt-3">
+          Showing <span id="current-count">6</span> of 247 professionals
+        </p>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="glass-card p-8 rounded-2xl">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-foreground mb-2">Why Choose NirmaanSathi?</h3>
+          <p class="text-muted-foreground">Your trusted partner in finding the right professionals for your project</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-verified to-verified rounded-full flex items-center justify-center">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-foreground mb-2">Verified Professionals</h4>
+            <p class="text-sm text-muted-foreground">All professionals undergo thorough background checks and
+              verification</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-available to-available rounded-full flex items-center justify-center">
+              <i class="fas fa-handshake text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-foreground mb-2">Secure Payments</h4>
+            <p class="text-sm text-muted-foreground">Protected transactions with escrow services and money-back
+              guarantee</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-premium to-premium rounded-full flex items-center justify-center">
+              <i class="fas fa-headset text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-foreground mb-2">24/7 Support</h4>
+            <p class="text-sm text-muted-foreground">Round-the-clock customer support for all your queries and concerns
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-featured to-featured rounded-full flex items-center justify-center">
+              <i class="fas fa-award text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-foreground mb-2">Quality Assured</h4>
+            <p class="text-sm text-muted-foreground">Guaranteed quality work with project monitoring and completion
+              assurance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 ">
+              <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-2xl font-bold">NirmaanSathi</span>
+          </div>
+          <p class="text-gray-400 max-w-md leading-relaxed mb-4">
+            Nepal's trusted platform for connecting clients with verified
+            construction professionals.
+          </p>
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>+977-9762883484</span>
+            </div>
+            <div class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>info@nirmaansathi.com</span>
+            </div>
+          </div>
+        </div>
+  
+        <div>
+          <h4 class="font-semibold mb-4 text-lg">Platform</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/findProfessional.html"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Find
+                Professionals</a></li>
+            <li><a href="/projects"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Project Map</a>
+            </li>
+            <li><a href="/quote-request"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Request
+                Quote</a></li>
+            <li><a href="/admin"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Admin
+                Dashboard</a></li>
+          </ul>
+        </div>
+  
+        <div>
+          <h4 class="font-semibold mb-4 text-lg">Support</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#how-it-works"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">How It
+                Works</a></li>
+            <li><a href="#contact"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Contact Us</a>
+            </li>
+            <li><a href="#"
+                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Privacy
+                Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Terms
+                of
+                Service</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2025 NirmaanSathi. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    let isMenuOpen = false;
+
+    mobileMenuBtn.addEventListener("click", () => {
+      isMenuOpen = !isMenuOpen;
+
+      if (isMenuOpen) {
+        mobileMenu.classList.remove("-translate-y-full", "opacity-0");
+        mobileMenu.classList.add("translate-y-0", "opacity-100");
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+      } else {
+        mobileMenu.classList.add("-translate-y-full", "opacity-0");
+        mobileMenu.classList.remove("translate-y-0", "opacity-100");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+    });
+
+    // Filter buttons functionality
+    const filterButtons = document.querySelectorAll(".filter-button");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+
+        // Filter professionals based on active filters
+        filterProfessionals();
+      });
+    });
+
+    // Heart/favorite functionality
+    const heartButtons = document.querySelectorAll(".heart-btn");
+
+    heartButtons.forEach(heart => {
+      heart.addEventListener("click", (e) => {
+        e.preventDefault();
+        const icon = heart.querySelector("i");
+        if (icon.classList.contains("text-red-500")) {
+          icon.classList.remove("text-red-500");
+          icon.classList.add("text-muted-foreground");
+        } else {
+          icon.classList.add("text-red-500");
+          icon.classList.remove("text-muted-foreground");
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        navbar.style.backgroundColor = "hsl(222 47% 11% / 0.95)";
+        navbar.style.backdropFilter = "blur(20px)";
+        navbar.style.borderBottom = "1px solid hsl(217 32% 17%)";
+      } else {
+        navbar.style.backgroundColor = "transparent";
+        navbar.style.backdropFilter = "none";
+        navbar.style.borderBottom = "none";
+      }
+    });
+
+    // Search functionality
+    const mainSearch = document.getElementById("main-search");
+    const searchBtn = document.getElementById("search-btn");
+
+    function performSearch() {
+      const searchTerm = mainSearch.value.toLowerCase();
+      const cards = document.querySelectorAll(".professional-card");
+
+      cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        const title = card.querySelector("p").textContent.toLowerCase();
+        const skills = Array.from(card.querySelectorAll(".skill-tag")).map(tag => tag.textContent.toLowerCase());
+
+        const isMatch = name.includes(searchTerm) ||
+          title.includes(searchTerm) ||
+          skills.some(skill => skill.includes(searchTerm));
+
+        if (isMatch || searchTerm === "") {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      updateResultsCount();
+    }
+
+    searchBtn.addEventListener("click", performSearch);
+    mainSearch.addEventListener("input", performSearch);
+
+    // Sort functionality
+    const sortSelect = document.getElementById("sort-select");
+
+    sortSelect.addEventListener("change", () => {
+      const sortBy = sortSelect.value;
+      const grid = document.getElementById("professionals-grid");
+      const cards = Array.from(grid.children);
+
+      cards.sort((a, b) => {
+        switch (sortBy) {
+          case "rating":
+            return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+          case "experience":
+            return parseFloat(b.dataset.experience) - parseFloat(a.dataset.experience);
+          case "price":
+            const priceA = parseFloat(a.dataset.price) || 999999;
+            const priceB = parseFloat(b.dataset.price) || 999999;
+            return priceA - priceB;
+          default:
+            return 0;
+        }
+      });
+
+      cards.forEach(card => grid.appendChild(card));
+    });
+
+    // Filter professionals function
+    function filterProfessionals() {
+      const activeFilters = Array.from(document.querySelectorAll(".filter-button.active"))
+        .map(btn => btn.dataset.filter);
+      const cards = document.querySelectorAll(".professional-card");
+
+      cards.forEach(card => {
+        let shouldShow = true;
+
+        if (activeFilters.includes("top-rated")) {
+          const rating = parseFloat(card.dataset.rating);
+          if (rating < 4.7) shouldShow = false;
+        }
+
+        if (activeFilters.includes("available")) {
+          const hasAvailable = card.querySelector('.badge-available');
+          if (!hasAvailable) shouldShow = false;
+        }
+
+        if (activeFilters.includes("verified")) {
+          const hasVerified = card.querySelector('.badge-verified');
+          if (!hasVerified) shouldShow = false;
+        }
+
+        if (activeFilters.includes("fast-response")) {
+          const hasFastResponse = card.textContent.includes("Fast Response");
+          if (!hasFastResponse) shouldShow = false;
+        }
+
+        card.style.display = shouldShow ? "block" : "none";
+      });
+
+      updateResultsCount();
+    }
+
+    // Update results count
+    function updateResultsCount() {
+      const visibleCards = document.querySelectorAll(".professional-card[style='display: block'], .professional-card:not([style*='display: none'])");
+      const count = visibleCards.length;
+      document.getElementById("results-count").textContent = count;
+      document.getElementById("current-count").textContent = count;
+    }
+
+    // Load more functionality
+    const loadMoreBtn = document.getElementById("load-more-btn");
+
+    loadMoreBtn.addEventListener("click", () => {
+      loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+      loadMoreBtn.disabled = true;
+
+      setTimeout(() => {
+        loadMoreBtn.innerHTML = '<i class="fas fa-plus mr-2"></i>Load More Professionals';
+        loadMoreBtn.disabled = false;
+        // Here you would typically load more data from an API
+      }, 1500);
+    });
+
+    // View Profile button functionality
+    const viewProfileBtns = document.querySelectorAll(".professional-card button:last-child");
+
+    viewProfileBtns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+        this.disabled = true;
+
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.disabled = false;
+          // Here you would typically navigate to the profile page
+        }, 1500);
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Initialize page
+    updateResultsCount();
+     // Add mouse cursor trail effect
+      document.addEventListener('mousemove', (e) => {
+        const trail = document.createElement('div');
+        trail.className = 'fixed w-2 h-2 bg-blue-400 rounded-full pointer-events-none z-50 opacity-60';
+        trail.style.left = e.clientX - 4 + 'px';
+        trail.style.top = e.clientY - 4 + 'px';
+        trail.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+          trail.style.opacity = '0';
+          trail.style.transform = 'scale(0)';
+        }, 100);
+
+        setTimeout(() => {
+          document.body.removeChild(trail);
+        }, 600);
+      });
+  </script>
+</body>
+
+</html>

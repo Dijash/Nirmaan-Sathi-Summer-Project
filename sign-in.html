@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - NirmaanSathi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue': '#3B82F6',
+            'brand-gray': '#1F2937',
+            'dark-primary': '#0F172A',
+            'dark-secondary': '#1E293B',
+            'dark-tertiary': '#334155',
+            'accent-gold': '#F59E0B'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .btn-primary {
+      background: linear-gradient(135deg, #3B82F6, #2563EB);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #D97706, #B45309);
+      box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+    }
+
+    .form-input:focus {
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .glass-effect {
+      background: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 25%, #334155 50%, #475569 75%, #64748B 100%);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+
+    .icon-glow {
+      filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .slide-in {
+      animation: slideIn 0.6s ease-out forwards;
+    }
+
+    .social-btn {
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .password-toggle {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .password-toggle:hover {
+      color: #3B82F6;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .floating-label {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      color: #94A3B8;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .form-input:focus+.floating-label,
+    .form-input.has-value+.floating-label {
+      top: -8px;
+      left: 12px;
+      font-size: 0.75rem;
+      color: #3B82F6;
+      background: #1E293B;
+      padding: 0 8px;
+      border-radius: 4px;
+    }
+
+    .form-input {
+      background: #1E293B !important;
+    }
+
+    .form-input::placeholder {
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-dark-primary text-slate-100 min-h-screen overflow-x-hidden">
+  <!-- Background Pattern -->
+  <div class="fixed inset-0 pointer-events-none">
+    <div class="absolute inset-0"
+      style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;><polygon points=&quot;30,0 60,30 30,60 0,30&quot; /></g></svg>');">
+    </div>
+  </div>
+
+
+  <!-- Professional Navbar -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800 py-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <a href="/index.html" class="group">
+        <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+          <!-- Logo -->
+          <div class="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden">
+            <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+          </div>
+          <!-- Text -->
+          <span class="text-2xl font-bold text-gray-100">
+            NirmaanSathi
+          </span>
+        </div>
+      </a>
+  
+  
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/findProfessional.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Find Professionals
+        </a>
+        <a href="/projects.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Project Map
+        </a>
+        <a href="/quote-request.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Get Quote
+        </a>
+        <a href="/how-it-works.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          How It Works
+        </a>
+        <a href="/contact" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Contact
+        </a>
+      </div>
+  
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="/sign-in.html"
+          class="text-gray-200 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
+          Sign In
+        </a>
+        <a href="/quote-request.html"
+          class="btn-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-all duration-300">
+          Get Quote
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden transition-transform duration-300 hover:scale-110">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="md:hidden bg-gray-800 border-t transform -translate-y-full opacity-0 transition-all duration-300">
+      <div class="px-6 py-4 space-y-4">
+        <a href="/findProfessional.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Find Professionals
+        </a>
+        <a href="/projects.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Project Map
+        </a>
+        <a href="/quote-request.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Get Quote
+        </a>
+        <a href="#how-it-works" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          How It Works
+        </a>
+        <a href="#contact" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Contact
+        </a>
+        <div class="pt-4 space-y-2">
+          <button class="block w-full text-left text-gray-200 font-medium hover:text-blue-600 transition-colors">
+            Sign In
+          </button>
+          <a href="/quote-request"
+            class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="min-h-screen flex items-center justify-center py-20 px-6 relative mt-10">
+    <div class="max-w-6xl mx-auto w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Side - Welcome Content -->
+        <div class="text-center lg:text-left space-y-8">
+          <div class="floating">
+            <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 text-glow">
+              Welcome Back
+            </h1>
+            <p class="text-xl text-slate-300 leading-relaxed mb-8">
+              Continue building your dreams with Nepal's most trusted construction professional network.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="glass-effect rounded-2xl p-6 slide-in">
+              <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl w-fit mb-4 icon-glow">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2">5,000+ Professionals</h3>
+              <p class="text-slate-400 text-sm">Verified architects and engineers</p>
+            </div>
+
+            <div class="glass-effect rounded-2xl p-6 slide-in" >
+              <div class="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl w-fit mb-4 icon-glow">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2">10,000+ Projects</h3>
+              <p class="text-slate-400 text-sm">Successfully completed builds</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Sign In Form -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="w-full max-w-md">
+            <div class="glass-effect rounded-3xl shadow-2xl p-8">
+              <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-white mb-2">Sign In to Your Account</h2>
+                <p class="text-slate-400">Access your construction dashboard</p>
+              </div>
+
+              <!-- Social Login Options -->
+              <div class="space-y-4 mb-6">
+                <button
+                  class="social-btn w-full flex items-center justify-center space-x-3 bg-white text-gray-800 p-4 rounded-xl font-medium hover:bg-gray-50 transition-all">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                    <path fill="currentColor"
+                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                    <path fill="currentColor"
+                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                    <path fill="currentColor"
+                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                  </svg>
+                  <span>Continue with Google</span>
+                </button>
+
+                <button
+                  class="social-btn w-full flex items-center justify-center space-x-3 bg-blue-600 text-white p-4 rounded-xl font-medium hover:bg-blue-700 transition-all">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  <span>Continue with Facebook</span>
+                </button>
+              </div>
+
+              <div class="flex items-center my-6">
+                <div class="flex-1 h-px bg-slate-600"></div>
+                <span class="px-4 text-slate-400 text-sm">OR</span>
+                <div class="flex-1 h-px bg-slate-600"></div>
+              </div>
+
+              <!-- Login Form -->
+              <form id="signinForm" class="space-y-6">
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required placeholder=" "
+                    class="form-input w-full px-4 py-4 bg-dark-secondary border border-slate-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white">
+                  <label for="email" class="floating-label">Email Address</label>
+                </div>
+
+                <div class="form-group">
+                  <div class="relative">
+                    <input type="password" id="password" name="password" required placeholder=" "
+                      class="form-input w-full px-4 py-4 pr-12 bg-dark-secondary border border-slate-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white">
+                    <label for="password" class="floating-label">Password</label>
+                    <button type="button" class="password-toggle absolute right-4 top-4 text-slate-400"
+                      onclick="togglePassword()">
+                      <svg id="eyeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between text-sm">
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox"
+                      class="w-4 h-4 bg-dark-secondary border-slate-600 rounded text-blue-500 focus:ring-blue-500 focus:ring-2">
+                    <span class="text-slate-300">Remember me</span>
+                  </label>
+                  <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">Forgot Password?</a>
+                </div>
+
+                <button type="submit"
+                  class="w-full btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-[1.02] transition-all duration-300 shadow-2xl">
+                  Sign In to Dashboard
+                </button>
+              </form>
+
+              <div class="mt-8 text-center">
+                <p class="text-slate-400">
+                  Don't have an account?
+                  <a href="/create-account.html" class="text-blue-400 hover:text-blue-300 font-medium transition-colors">Create
+                    Account</a>
+                </p>
+              </div>
+
+              <!-- Account Type Selection -->
+              <div class="mt-6 p-4 bg-dark-primary/50 rounded-2xl">
+                <p class="text-slate-400 text-sm text-center mb-3">New to NirmaanSathi?</p>
+                <div class="flex space-x-3">
+                  <a href="/signup.html?type=client"
+                    class="flex-1 text-center py-3 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-all text-sm font-medium">
+                    Join as Client
+                  </a>
+                  <a href="/signup.html?type=professional"
+                    class="flex-1 text-center py-3 bg-amber-600/20 text-amber-400 rounded-lg hover:bg-amber-600/30 transition-all text-sm font-medium">
+                    Join as Professional
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="successModal"
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+    <div class="glass-effect rounded-3xl p-10 max-w-md mx-4 text-center shadow-2xl">
+      <div class="mb-6">
+        <div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-full p-4 inline-block icon-glow">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+      </div>
+      <h3 class="text-2xl font-bold text-white mb-4">Welcome Back!</h3>
+      <p class="text-slate-400 mb-8 leading-relaxed">Successfully signed in to your NirmaanSathi dashboard. Redirecting
+        you now...</p>
+      <div class="w-full bg-slate-700 rounded-full h-2">
+        <div id="progressBar"
+          class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000"
+          ></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Form submission handler
+    document.getElementById('signinForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Add loading state
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Signing In...
+            `;
+      submitBtn.disabled = true;
+
+      // Simulate API call
+      setTimeout(() => {
+        document.getElementById('successModal').classList.remove('hidden');
+
+        // Animate progress bar
+        const progressBar = document.getElementById('progressBar');
+        setTimeout(() => {
+          progressBar.style.width = '100%';
+        }, 100);
+
+        // Redirect after animation (in a real app, this would go to the actual dashboard)
+        setTimeout(() => {
+          // window.location.href = '/dashboard.html';
+          // For demo purposes, just hide the modal
+          document.getElementById('successModal').classList.add('hidden');
+          this.reset();
+        }, 3000);
+
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 1500);
+    });
+
+    // Password toggle function
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>
+                `;
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                `;
+      }
+    }
+
+    // Enhanced form interactions with better floating label logic
+    const inputs = document.querySelectorAll('input[type="email"], input[type="password"]');
+    inputs.forEach(input => {
+      // Initial check for pre-filled values
+      const checkValue = () => {
+        if (input.value && input.value.trim() !== '') {
+          input.classList.add('has-value');
+        } else {
+          input.classList.remove('has-value');
+        }
+      };
+
+      input.addEventListener('focus', function () {
+        this.parentElement.classList.add('focused');
+      });
+
+      input.addEventListener('blur', function () {
+        this.parentElement.classList.remove('focused');
+        checkValue();
+      });
+
+      input.addEventListener('input', checkValue);
+
+      // Check initial value on page load
+      checkValue();
+    });
+
+    // Social login handlers
+    document.querySelectorAll('.social-btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const provider = this.textContent.includes('Google') ? 'Google' : 'Facebook';
+
+        // Add loading state
+        const originalContent = this.innerHTML;
+        this.innerHTML = `
+                    <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Connecting to ${provider}...</span>
+                `;
+
+        // Simulate social login
+        setTimeout(() => {
+          this.innerHTML = originalContent;
+          alert(`${provider} login integration would be implemented here.`);
+        }, 2000);
+      });
+       // Add mouse cursor trail effect
+      document.addEventListener('mousemove', (e) => {
+        const trail = document.createElement('div');
+        trail.className = 'fixed w-2 h-2 bg-blue-400 rounded-full pointer-events-none z-50 opacity-60';
+        trail.style.left = e.clientX - 4 + 'px';
+        trail.style.top = e.clientY - 4 + 'px';
+        trail.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+          trail.style.opacity = '0';
+          trail.style.transform = 'scale(0)';
+        }, 100);
+
+        setTimeout(() => {
+          document.body.removeChild(trail);
+        }, 600);
+      });
+    });
+  </script>
+  
+</body>
+
+</html>

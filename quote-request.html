@@ -169,7 +169,7 @@
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 font-sans min-h-screen">
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 font-poppins min-h-screen">
 
   <!-- Animated Background -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none">
@@ -881,6 +881,25 @@
     document.querySelectorAll('.form-group').forEach(el => {
       observer.observe(el);
     });
+     // Add mouse cursor trail effect
+      document.addEventListener('mousemove', (e) => {
+        const trail = document.createElement('div');
+        trail.className = 'fixed w-2 h-2 bg-blue-400 rounded-full pointer-events-none z-50 opacity-60';
+        trail.style.left = e.clientX - 4 + 'px';
+        trail.style.top = e.clientY - 4 + 'px';
+        trail.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+          trail.style.opacity = '0';
+          trail.style.transform = 'scale(0)';
+        }, 100);
+
+        setTimeout(() => {
+          document.body.removeChild(trail);
+        }, 600);
+      });
   </script>
 </body>
 

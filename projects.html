@@ -846,6 +846,25 @@
     };
 
     lazyLoadImages();
+     // Add mouse cursor trail effect
+      document.addEventListener('mousemove', (e) => {
+        const trail = document.createElement('div');
+        trail.className = 'fixed w-2 h-2 bg-blue-400 rounded-full pointer-events-none z-50 opacity-60';
+        trail.style.left = e.clientX - 4 + 'px';
+        trail.style.top = e.clientY - 4 + 'px';
+        trail.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+          trail.style.opacity = '0';
+          trail.style.transform = 'scale(0)';
+        }, 100);
+
+        setTimeout(() => {
+          document.body.removeChild(trail);
+        }, 600);
+      });
   </script>
 </body>
 

@@ -139,94 +139,120 @@
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans">
-  <!-- Professional Navbar -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800 py-6">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
-      <a href="/index.html" class="group">
-        <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
-          <!-- Logo -->
-          <div class="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden">
-            <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+  <!-- Fixed Professional Navbar -->
+  <nav id="navbar"
+    class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800/95 backdrop-blur-sm border-b border-gray-700/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo Section -->
+        <a href="/index.html" class="group flex-shrink-0">
+          <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+            <div class="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden mr-3">
+              <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-xl font-bold text-gray-100 hidden sm:block">
+              NirmaanSathi
+            </span>
           </div>
-          <!-- Text -->
-          <span class="text-2xl font-bold text-gray-100">
-            NirmaanSathi
-          </span>
+        </a>
+  
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="./findProfessional.html"
+            class="nav-link px-4 py-2 text-gray-200 hover:text-blue-400 font-medium rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+            Find Professionals
+          </a>
+          <a href="./aboutus.html"
+            class="nav-link px-4 py-2 text-gray-200 hover:text-blue-400 font-medium rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+            About Us
+          </a>
+          <a href="./projects.html"
+            class="nav-link px-4 py-2 text-gray-200 hover:text-blue-400 font-medium rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+            Project Map
+          </a>
+          <a href="./quote-request.html"
+            class="nav-link px-4 py-2 text-gray-200 hover:text-blue-400 font-medium rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+            Get Quote
+          </a>
+          <a href="./how-it-works.html"
+            class="nav-link px-4 py-2 text-gray-200 hover:text-blue-400 font-medium rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+            How It Works
+          </a>
+          <a href="./contact.html"
+            class="nav-link px-4 py-2 text-gray-200 hover:text-blue-400 font-medium rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+            Contact
+          </a>
         </div>
-      </a>
-
-
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="./findProfessional.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-          Find Professionals
-        </a>
-        <a href="./projects.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-          Project Map
-        </a>
-        <a href="./quote-request.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-          Get Quote
-        </a>
-        <a href="./how-it-works.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-          How It Works
-        </a>
-        <a href="./contact.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-          Contact
-        </a>
+  
+        <!-- Desktop Auth Buttons -->
+        <div class="hidden lg:flex items-center space-x-4 flex-shrink-0">
+          <a href="./sign-in.html"
+            class="text-gray-200 hover:text-blue-400 font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-gray-700/50">
+            Sign In
+          </a>
+          <a href="./quote-request.html"
+            class="btn-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            Get Quote
+          </a>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn"
+          class="lg:hidden p-2 rounded-lg hover:bg-gray-700/50 transition-all duration-300 flex-shrink-0">
+          <svg id="menu-icon" class="w-6 h-6 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 text-gray-200 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="./sign-in.html" class="text-gray-200 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
-          Sign In
-        </a>
-        <a href="./quote-request.html"
-          class="btn-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-all duration-300">
-          Get Quote
-        </a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden transition-transform duration-300 hover:scale-110">
-        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
     </div>
-
+  
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-      class="md:hidden bg-gray-800 border-t transform -translate-y-full opacity-0 transition-all duration-300">
-      <div class="px-6 py-4 space-y-4">
-        <a href="./findProfessional.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+      class="lg:hidden bg-gray-800/95 backdrop-blur-sm border-t border-gray-700/50 transform -translate-y-full opacity-0 transition-all duration-300 absolute w-full top-full left-0 shadow-xl">
+      <div class="px-4 py-6 space-y-1 max-w-7xl mx-auto">
+        <a href="./findProfessional.html"
+          class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
           Find Professionals
         </a>
-        <a href="./projects.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        <a href="./aboutus.html"
+          class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
+          About Us
+        </a>
+        <a href="./projects.html"
+          class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
           Project Map
         </a>
-        <a href="./quote-request.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        <a href="./quote-request.html"
+          class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
           Get Quote
         </a>
-        <a href="./how-it-works.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        <a href="./how-it-works.html"
+          class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
           How It Works
         </a>
-        <a href="./contact.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+        <a href="./contact.html"
+          class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
           Contact
         </a>
-        <div class="pt-4 space-y-2">
-          <button class="block w-full text-left text-gray-200 font-medium hover:text-blue-600 transition-colors">
+  
+        <!-- Mobile Auth Section -->
+        <div class="pt-4 mt-4 border-t border-gray-700/50 space-y-2">
+          <a href="./sign-in.html"
+            class="block px-4 py-3 text-gray-200 font-medium hover:text-blue-400 hover:bg-gray-700/50 rounded-lg transition-all duration-300">
             Sign In
-          </button>
+          </a>
           <a href="./quote-request.html"
-            class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            class="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-center shadow-lg">
             Get Quote
           </a>
         </div>
       </div>
     </div>
   </nav>
+
 
   <!-- Clean Hero Section -->
   <section class="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden mt-3">
@@ -653,84 +679,84 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <div class="col-span-2">
-          <div class="flex items-center mb-4">
-            <div
-              class="w-12 h-12 ">
-              <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />  
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div class="col-span-2">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ">
+                <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />  
+              </div>
+              <span class="text-2xl font-bold">NirmaanSathi</span>
             </div>
-            <span class="text-2xl font-bold">NirmaanSathi</span>
+            <p class="text-gray-400 max-w-md leading-relaxed mb-4">
+              Nepal's trusted platform for connecting clients with verified
+              construction professionals.
+            </p>
+            <div class="flex flex-col space-y-2">
+              <div class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+977-9762883484</span>
+              </div>
+              <div class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>info@nirmaansathi.com</span>
+              </div>
+            </div>
           </div>
-          <p class="text-gray-400 max-w-md leading-relaxed mb-4">
-            Nepal's trusted platform for connecting clients with verified
-            construction professionals.
+
+          <div>
+            <h4 class="font-semibold mb-4 text-lg">Platform</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="./findProfessional.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Find
+                  Professionals</a></li>
+              <li><a href="./projects.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Project Map</a>
+              </li>
+              <li><a href="./quote-request.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Request
+                  Quote</a></li>
+              <li><a href="./admin.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Admin
+                  Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4 text-lg">Support</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="./how-it-works.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">How It
+                  Works</a></li>
+              <li><a href="./contact.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Contact Us</a>
+              </li>
+              <li><a href="./privacy.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Privacy
+                  Policy</a></li>
+              <li><a href="./terms.html"
+                  class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Terms of
+                  Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-center">
+          <p class="text-gray-400">
+            © 2025 NirmaanSathi. All rights reserved.
           </p>
-          <div class="flex flex-col space-y-2">
-            <div class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <span>+977-9762883484</span>
-            </div>
-            <div class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span>info@nirmaansathi.com</span>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4 text-lg">Platform</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="./findProfessional.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Find
-                Professionals</a></li>
-            <li><a href="./projects.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Project Map</a>
-            </li>
-            <li><a href="./quote-request.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Request
-                Quote</a></li>
-            <li><a href="./admin.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Admin
-                Dashboard</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4 text-lg">Support</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="./how-it-works.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">How It
-                Works</a></li>
-            <li><a href="./contact.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Contact Us</a>
-            </li>
-            <li><a href="./privacy.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Privacy
-                Policy</a></li>
-            <li><a href="./terms.html"
-                class="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">Terms of
-                Service</a></li>
-          </ul>
         </div>
       </div>
-
-      <div class="border-t border-gray-800 pt-8 text-center">
-        <p class="text-gray-400">
-          © 2025 NirmaanSathi. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <!-- JavaScript for interactions -->
   <script>

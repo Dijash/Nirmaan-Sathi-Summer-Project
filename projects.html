@@ -107,94 +107,100 @@
 
 <body class="bg-gray-900 text-gray-100">
   <!-- Professional Navbar -->
-<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800 py-6">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
-    <a href="/index.html" class="group">
-      <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
-        <!-- Logo -->
-        <div class="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden">
-          <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gray-800 py-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <a href="/index.html" class="group">
+        <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+          <!-- Logo -->
+          <div class="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden">
+            <img src="./Assets/logo.png" alt="NirmaanSathi Logo" class="w-full h-full object-contain" />
+          </div>
+          <!-- Text -->
+          <span class="text-2xl font-bold text-gray-100">
+            NirmaanSathi
+          </span>
         </div>
-        <!-- Text -->
-        <span class="text-2xl font-bold text-gray-100">
-          NirmaanSathi
-        </span>
+      </a>
+  
+  
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="./findProfessional.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Find Professionals
+        </a>
+        <a href="./aboutus.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          About us
+        </a>
+        <a href="./projects.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Project Map
+        </a>
+        <a href="./quote-request.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Get Quote
+        </a>
+        <a href="./how-it-works.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          How It Works
+        </a>
+        <a href="./contact.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
+          Contact
+        </a>
       </div>
-    </a>
-
-
-    <!-- Desktop Navigation -->
-    <div class="hidden md:flex items-center space-x-8">
-      <a href="./findProfessional.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-        Find Professionals
-      </a>
-      <a href="./projects.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-        Project Map
-      </a>
-      <a href="./quote-request.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-        Get Quote
-      </a>
-      <a href="./how-it-works.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-        How It Works
-      </a>
-      <a href="./contact.html" class="nav-link text-gray-200 hover:text-blue-600 font-medium">
-        Contact
-      </a>
-    </div>
-
-    <div class="hidden md:flex items-center space-x-4">
-      <a href="./sign-in.html"
-        class="text-gray-200 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
-        Sign In
-      </a>
-      <a href="./quote-request.html"
-        class="btn-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-all duration-300">
-        Get Quote
-      </a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden transition-transform duration-300 hover:scale-110">
-      <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu"
-    class="md:hidden bg-gray-800 border-t transform -translate-y-full opacity-0 transition-all duration-300">
-    <div class="px-6 py-4 space-y-4">
-      <a href="./findProfessional.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
-        Find Professionals
-      </a>
-      <a href="./projects.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
-        Project Map
-      </a>
-      <a href="./quote-request.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
-        Get Quote
-      </a>
-      <a href="./how-it-works.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
-        How It Works
-      </a>
-      <a href="./contact.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
-        Contact
-      </a>
-      <div class="pt-4 space-y-2">
-        <button class="block w-full text-left text-gray-200 font-medium hover:text-blue-600 transition-colors">
+  
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="./sign-in.html"
+          class="text-gray-200 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
           Sign In
-        </button>
+        </a>
         <a href="./quote-request.html"
-          class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+          class="btn-primary text-white px-6 py-2 rounded-lg font-medium hover:scale-105 transition-all duration-300">
           Get Quote
         </a>
       </div>
+  
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden transition-transform duration-300 hover:scale-110">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
-  </div>
-</nav>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="md:hidden bg-gray-800 border-t transform -translate-y-full opacity-0 transition-all duration-300">
+      <div class="px-6 py-4 space-y-4">
+        <a href="./findProfessional.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Find Professionals
+        </a>
+        <a href="./aboutus.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          About us
+        </a>
+        <a href="./projects.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Project Map
+        </a>
+        <a href="./quote-request.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Get Quote
+        </a>
+        <a href="./how-it-works.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          How It Works
+        </a>
+        <a href="./contact.html" class="block text-gray-200 font-medium hover:text-blue-600 transition-colors">
+          Contact
+        </a>
+        <div class="pt-4 space-y-2">
+          <button class="block w-full text-left text-gray-200 font-medium hover:text-blue-600 transition-colors">
+            Sign In
+          </button>
+          <a href="./quote-request.html"
+            class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="pt-32 pb-16bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden mt-3 mb-4">
